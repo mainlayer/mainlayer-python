@@ -18,7 +18,7 @@ from mainlayer import (
     ResourceType,
 )
 
-BASE_URL = "https://api.mainlayer.xyz"
+BASE_URL = "https://api.mainlayer.fr"
 
 
 # ---------------------------------------------------------------------------

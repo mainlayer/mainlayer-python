@@ -5,7 +5,7 @@
 [![CI](https://github.com/mainlayer/mainlayer-python/actions/workflows/ci.yml/badge.svg)](https://github.com/mainlayer/mainlayer-python/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Official Python SDK for [Mainlayer](https://mainlayer.xyz) — payment infrastructure for AI agents and developers.
+Official Python SDK for [Mainlayer](https://mainlayer.fr) — payment infrastructure for AI agents and developers.
 
 Create accounts, publish paid resources, accept payments, and manage subscriptions — all programmatically. Both AI agents and human developers can integrate in minutes.
 

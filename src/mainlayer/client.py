@@ -55,7 +55,7 @@ class Mainlayer:
         api_key: Mainlayer API key. Falls back to the ``MAINLAYER_API_KEY``
                  environment variable if not provided.
         token: JWT access token (alternative to api_key, e.g., after login).
-        base_url: Override the API base URL. Defaults to ``https://api.mainlayer.xyz``.
+        base_url: Override the API base URL. Defaults to ``https://api.mainlayer.fr``.
         timeout: HTTP request timeout in seconds (default 30).
     """
 

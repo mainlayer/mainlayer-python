@@ -9,7 +9,7 @@ description = "Official Python SDK for Mainlayer — payment infrastructure for 
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [{ name = "Mainlayer", email = "sdk@mainlayer.xyz" }]
+authors = [{ name = "Mainlayer", email = "sdk@mainlayer.fr" }]
 keywords = ["mainlayer", "payments", "ai", "agents", "api", "sdk"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -36,8 +36,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://mainlayer.xyz"
-Documentation = "https://docs.mainlayer.xyz"
+Homepage = "https://mainlayer.fr"
+Documentation = "https://docs.mainlayer.fr"
 Repository = "https://github.com/mainlayer/mainlayer-python"
 Issues = "https://github.com/mainlayer/mainlayer-python/issues"
 

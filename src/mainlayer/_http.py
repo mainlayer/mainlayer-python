@@ -18,7 +18,7 @@ from mainlayer._exceptions import MainlayerError
 
 logger = logging.getLogger(__name__)
 
-_DEFAULT_BASE_URL = "https://api.mainlayer.xyz"
+_DEFAULT_BASE_URL = "https://api.mainlayer.fr"
 _DEFAULT_TIMEOUT = 30.0
 _MAX_RETRIES = 3
 _RETRY_STATUS_CODES = {429, 500, 502, 503, 504}
