@@ -45,6 +45,7 @@ from mainlayer._exceptions import (
 )
 from mainlayer.client import AsyncMainlayer, Mainlayer
 from mainlayer.types import (
+    ActivateResponse,
     Analytics,
     AnalyticsDataPoint,
     ApiKey,
@@ -56,14 +57,20 @@ from mainlayer.types import (
     FeeModel,
     Invoice,
     Payment,
+    PaymentRequiredPayload,
     Plan,
+    QuotaConfig,
     RegisterResponse,
     Resource,
     ResourceType,
     Subscription,
+    SubscriptionApproveResponse,
+    SubscriptionCancelResponse,
     TokenResponse,
     Vendor,
+    VendorRegisterResponse,
     Webhook,
+    WebhookSecretResponse,
 )
 
 __version__ = "0.1.0"
@@ -80,6 +87,7 @@ __all__ = [
     "RateLimitError",
     "ValidationError",
     # Types
+    "ActivateResponse",
     "Analytics",
     "AnalyticsDataPoint",
     "ApiKey",
@@ -91,14 +99,20 @@ __all__ = [
     "FeeModel",
     "Invoice",
     "Payment",
+    "PaymentRequiredPayload",
     "Plan",
+    "QuotaConfig",
     "RegisterResponse",
     "Resource",
     "ResourceType",
     "Subscription",
+    "SubscriptionApproveResponse",
+    "SubscriptionCancelResponse",
     "TokenResponse",
     "Vendor",
+    "VendorRegisterResponse",
     "Webhook",
+    "WebhookSecretResponse",
     # Version
     "__version__",
 ]

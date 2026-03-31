@@ -1,10 +1,10 @@
-"""Vendor resource — manage vendor profile."""
+"""Vendor resource — register and manage vendor profile."""
 
 from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-from mainlayer.types import Vendor
+from mainlayer.types import Vendor, VendorRegisterResponse
 
 if TYPE_CHECKING:
     from mainlayer._http import AsyncTransport, SyncTransport
@@ -15,6 +15,32 @@ class VendorResource:
 
     def __init__(self, http: SyncTransport) -> None:
         self._http = http
+
+    def register(
+        self,
+        wallet_address: str,
+        nonce: str,
+        signed_message: str,
+    ) -> VendorRegisterResponse:
+        """
+        Register a new vendor by proving ownership of a wallet address.
+
+        Args:
+            wallet_address: The vendor's wallet address.
+            nonce: A unique nonce string used in the signed message.
+            signed_message: Message signed with the wallet's private key
+                            to prove ownership.
+
+        Returns:
+            VendorRegisterResponse with vendor_id and api_key.
+        """
+        body: dict[str, Any] = {
+            "wallet_address": wallet_address,
+            "nonce": nonce,
+            "signed_message": signed_message,
+        }
+        data = self._http.post("/vendors/register", json=body)
+        return VendorRegisterResponse.model_validate(data or {})
 
     def get(self) -> Vendor:
         """
@@ -66,6 +92,32 @@ class AsyncVendorResource:
 
     def __init__(self, http: AsyncTransport) -> None:
         self._http = http
+
+    async def register(
+        self,
+        wallet_address: str,
+        nonce: str,
+        signed_message: str,
+    ) -> VendorRegisterResponse:
+        """
+        Register a new vendor by proving ownership of a wallet address.
+
+        Args:
+            wallet_address: The vendor's wallet address.
+            nonce: A unique nonce string used in the signed message.
+            signed_message: Message signed with the wallet's private key
+                            to prove ownership.
+
+        Returns:
+            VendorRegisterResponse with vendor_id and api_key.
+        """
+        body: dict[str, Any] = {
+            "wallet_address": wallet_address,
+            "nonce": nonce,
+            "signed_message": signed_message,
+        }
+        data = await self._http.post("/vendors/register", json=body)
+        return VendorRegisterResponse.model_validate(data or {})
 
     async def get(self) -> Vendor:
         """
